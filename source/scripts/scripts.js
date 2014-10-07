@@ -1,8 +1,9 @@
 /**
-  * A simple static scene is displayed when the page is loaded with click and 
-  * drag UI functionality.
-  */
+ * A simple static scene is displayed when the page is loaded with click and 
+ * drag UI functionality.
+ */
 (function(){
+  
   var orderIndex = 0;
   var selected   = false;
 

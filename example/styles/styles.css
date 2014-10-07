@@ -1,0 +1,30 @@
+#R {
+  fill:white;
+  opacity:0.5;
+}
+
+#B1 {
+  fill:none;
+  stroke:gray;
+  stroke-width:7;
+}
+
+#B2 {
+  fill:none;
+  stroke:white;
+  stroke-width:1;
+}
+
+#T {
+  fill:white;
+  font-size:120px;
+  opacity:0.0;
+  text-anchor:middle;
+  transition:opacity 0.8s;
+}
+
+#P {
+  stroke:black;
+  stroke-width:2;
+  fill:none;
+}

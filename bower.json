@@ -1,0 +1,9 @@
+{
+  "name": "square-snowflake",
+  "version": "0.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "qunit": "~1.14.0"
+  }
+}

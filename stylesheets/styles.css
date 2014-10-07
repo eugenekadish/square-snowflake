@@ -1,0 +1,18 @@
+#cover {
+  fill: white;
+  opacity: 0.5;
+}
+
+#digit {
+  fill: white;
+  font-size: 120px;
+  opacity: 0.0;
+  text-anchor: middle;
+  transition: opacity 0.8s;
+}
+
+#curve {
+  stroke:black;
+  stroke-width:2;
+  fill:none;
+}

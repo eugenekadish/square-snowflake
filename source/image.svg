@@ -4,20 +4,20 @@
 <svg id="S" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   
   <mask id="M">
-    <rect id="R" x="0" y="0" height="100%" width="100%" />
+    <rect id="cover" x="0" y="0" height="100%" width="100%" />
   </mask>
    
   <defs>
     <g id="I">
       <rect width="100%" height="100%" fill="blue" />
-      <polyline id="P" />
+      <polyline id="curve" />
     </g>
   </defs>
 
   <use xlink:href="#I" mask="url(#M)" />
 
   <clipPath id="C">
-    <circle id="L" cx="205" cy="160" r="80" />
+    <circle id="lens" cx="205" cy="160" r="80" />
   </clipPath>
 
   <defs>
@@ -29,19 +29,12 @@
     </radialGradient>
   </defs>
 
-
-  <g id="G">     
-
+  <g id="clip">     
     <use xlink:href="#I" clip-path="url(#C)" opacity="1.0" />
-
-    <circle id="B" cx="205" cy="160" r="80" fill="url(#Gradient)" />
-
-    <circle id="B1" cx="205" cy="160" r="80" />
-    <circle id="B2" cx="205" cy="160" r="80" />
-
+    <circle id="shade" cx="205" cy="160" r="80" fill="url(#Gradient)" />
   </g>
 
-  <text id="T" x="300" y="300"></text>
+  <text id="digit" x="300" y="300"></text>
 
   <script xlink:href="scripts/square-snowflake.js"></script>
   <script xlink:href="scripts/scripts.js"></script>

@@ -11,15 +11,13 @@
   // for them to be iterated through cyclically.
   var orders = [1, 2, 3, 4, 5, 6, 5, 4, 3, 2];
 
-  var clip              = document.getElementById('G');
-  var lens              = document.getElementById('L');
-  var text              = document.getElementById('T');
-  var cover             = document.getElementById('S');
-  var curve             = document.getElementById('P');
+  var clip         = document.getElementById('clip');
+  var lens         = document.getElementById('lens');
+  var text         = document.getElementById('digit');
+  var cover        = document.getElementById('S');
+  var curve        = document.getElementById('curve');
   
-  var lensGradient      = document.getElementById('B');
-  var thinLensBoundary  = document.getElementById('B2');
-  var thickLensBoundary = document.getElementById('B1');
+  var lensGradient = document.getElementById('shade');
 
   var widgetHeight = cover.getBoundingClientRect().right;
   var widgetWidth  = cover.getBoundingClientRect().bottom;
@@ -44,13 +42,8 @@
   var initialX;
   var initialY;
   
-  var lensGradientCX;
-  var thinLensBoundaryCX;
-  var thinLensBoundaryCY;
-  
+  var lensGradientCX; 
   var lensGradientCY;
-  var thickLensBoundaryCX;
-  var thickLensBoundaryCY;
 
   // Initialize a curve.
   var s = new SquareSnowflake(orders[orderIndex], horizontalStart, verticalStart, step);
@@ -78,12 +71,6 @@
 
     lensGradientCX = parseInt(lensGradient.getAttribute("cx"));
     lensGradientCY = parseInt(lensGradient.getAttribute("cy"));
-
-    thinLensBoundaryCX  = parseInt(thinLensBoundary.getAttribute("cx"));
-    thinLensBoundaryCY  = parseInt(thinLensBoundary.getAttribute("cy"));
-    
-    thickLensBoundaryCX = parseInt(thickLensBoundary.getAttribute("cx"));
-    thickLensBoundaryCY = parseInt(thickLensBoundary.getAttribute("cy"));
 
     finalX = event.clientX;
     finalY = event.clientY;
@@ -156,23 +143,11 @@
       lensGradientCX = deltaX + lensGradientCX;
       lensGradientCY = deltaY + lensGradientCY;
 
-      thinLensBoundaryCX = deltaX + thinLensBoundaryCX;
-      thinLensBoundaryCY = deltaY + thinLensBoundaryCY;
-
-      thickLensBoundaryCX = deltaX + thickLensBoundaryCX;
-      thickLensBoundaryCY = deltaY + thickLensBoundaryCY;
-
       lens.setAttribute("cx", lensCX);
       lens.setAttribute("cy", lensCY);
 
       lensGradient.setAttribute("cx", lensGradientCX);
       lensGradient.setAttribute("cy", lensGradientCY);
-
-      thinLensBoundary.setAttribute("cx", thinLensBoundaryCX);
-      thinLensBoundary.setAttribute("cy", thinLensBoundaryCY);
-
-      thickLensBoundary.setAttribute("cx", thickLensBoundaryCX);
-      thickLensBoundary.setAttribute("cy", thickLensBoundaryCY);
 
       finalX = initialX;
       finalY = initialY;

@@ -1,8 +1,10 @@
 # Square Snowflake
 
+Drawing the recursively defined Sierpinski fractal curve using SVG. The user can move cyclically through the depths of recursion using the keyboard. Also, the <em> lens </em> can be clicked and dragged across the widget.
+
 ## Setup
 
-The dependencies are [gl-matrix](https://github.com/toji/gl-matrix), matrix and vector javascript library, along with the [qunit](http://qunitjs.com), unit testing framework. To avoid downloading these packages manually, the command
+Only [qunit](http://qunitjs.com) is required to run the unit tests. To avoid downloading these package manually, the command
 
     bower install
 
@@ -14,4 +16,4 @@ will download the package.
 
 ## Viewing
 
-To check how the template is rendering simply navigate to the index file in the root directory with any browser that has WebGL support. Alternatively, check out the [project site](http://eugenekadish.github.io/scene-template/) to compare the widget. The tests can be run in the browser as well, by opening *runner.html* in *tests*.
+To see the running application navigate to the index file in the root directory, or checkout out the [project site](http://eugenekadish.github.io/square-snowflake). The tests can be run in the browser as well, by opening *runner.html* in *tests*.

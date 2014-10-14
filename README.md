@@ -1,1 +1,1 @@
-Dynamic Sierpinski curve drawable at different orders.
+Interactive drawing of the [Sirepinski Curve](http://en.wikipedia.org/wiki/Sierpi%C5%84ski_curve). The idea for the lensing effect came from [this famous tiger](http://www.bogotobogo.com/svg_source/famoustiger.svg).

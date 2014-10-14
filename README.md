@@ -1,10 +1,10 @@
 # Square Snowflake
 
-Drawing the recursively defined Sierpinski fractal curve using SVG. The user can move cyclically through the depths of recursion using the keyboard. Also, the <em> lens </em> can be clicked and dragged across the widget.
+Drawing of a recursively defined Sierpinski fractal curve using SVG.
 
 ## Setup
 
-Only [qunit](http://qunitjs.com) is required to run the unit tests. To avoid downloading these package manually, the command
+The only dependency is [qunit](http://qunitjs.com); for running the unit tests. To avoid downloading these package manually, the command
 
     bower install
 

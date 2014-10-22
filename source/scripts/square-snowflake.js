@@ -52,7 +52,7 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
       x = xTemp;
       y = yTemp;
 
-      if(i == order) A(i);
+      if(i == order) floor(i);
 
       xDelta = x;
       yDelta = y;
@@ -64,8 +64,8 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
         points.push(xDelta, yDelta);
         points.push(x, y);
       }
-
-      if(i == order) B(i);
+      
+      if(i == order) right(i);
 
       xDelta = x;
       yDelta = y;
@@ -77,8 +77,8 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
         points.push(xDelta, yDelta);
         points.push(x, y);
       }
-
-      if(i == order) C(i);
+      
+      if(i == order) roof(i);
 
       xDelta = x;
       yDelta = y;
@@ -90,8 +90,8 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
         points.push(xDelta, yDelta);
         points.push(x, y);
       }
-
-      if(i == order) D(i);
+      
+      if(i == order) left(i);
 
       xDelta = x;
       yDelta = y;
@@ -104,7 +104,7 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
         points.push(x, y);
       }
     }
-
+ 
     return points;
   }
 
@@ -113,11 +113,11 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
    *
    * {Integer} index Current level of recursion.
    */
-  function A(index){
+  function floor(index){
 
     if(index > 0){
 
-      A(index - 1);
+      floor(index - 1);
 
       xDelta = x;
       yDelta = y;
@@ -128,14 +128,14 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
       points.push(xDelta, yDelta);
       points.push(x, y);
 
-      B(index - 1);
+      right(index - 1);
 
       xDelta = x;
       yDelta = y;
 
       x = x + 2.0 * step;
 
-      D(index - 1);
+      left(index - 1);
 
       xDelta = x;
       yDelta = y;
@@ -146,7 +146,7 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
       points.push(xDelta, yDelta);
       points.push(x, y);
 
-      A(index - 1);
+      floor(index - 1);
     }
   }
 
@@ -155,11 +155,11 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
    *
    * {Integer} index Current level of recursion.
    */
-  function B(index){
+  function right(index){
 
     if(index > 0){
 
-      B(index - 1);
+      right(index - 1);
 
       xDelta = x;
       yDelta = y;
@@ -170,7 +170,7 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
       points.push(xDelta, yDelta);
       points.push(x, y);
 
-      C(index - 1);
+      roof(index - 1);
 
       xDelta = x;
       yDelta = y;
@@ -180,7 +180,7 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
       points.push(xDelta, yDelta);
       points.push(x, y);
 
-      A(index - 1);
+      floor(index - 1);
 
       xDelta = x;
       yDelta = y;
@@ -191,7 +191,7 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
       points.push(xDelta, yDelta);
       points.push(x, y);
 
-      B(index - 1);
+      right(index - 1);
     }
   }
   
@@ -200,11 +200,11 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
    *
    * {Integer} index Current level of recursion.
    */
-  function C(index){
+  function roof(index){
 
     if(index > 0){
 
-      C(index - 1);
+      roof(index - 1);
 
       xDelta = x;
       yDelta = y;
@@ -215,7 +215,7 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
       points.push(xDelta, yDelta);
       points.push(x, y);
 
-      D(index - 1);
+      left(index - 1);
 
       xDelta = x;
       yDelta = y;
@@ -225,7 +225,7 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
       points.push(xDelta, yDelta);
       points.push(x, y);
 
-      B(index - 1);
+      right(index - 1);
 
       xDelta = x;
       yDelta = y;
@@ -236,7 +236,7 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
       points.push(xDelta, yDelta);
       points.push(x, y);
 
-      C(index - 1);
+      roof(index - 1);
     }
   }
 
@@ -245,11 +245,11 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
    *
    * {Integer} index Current level of recursion.
    */
-  function D(index){
+  function left(index){
 
     if(index > 0){
 
-      D(index - 1);
+      left(index - 1);
 
       xDelta = x;
       yDelta = y;
@@ -260,7 +260,7 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
       points.push(xDelta, yDelta);
       points.push(x, y);
 
-      A(index - 1);
+      floor(index - 1);
 
       xDelta = x;
       yDelta = y;
@@ -270,7 +270,7 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
       points.push(xDelta, yDelta);
       points.push(x, y);
 
-      C(index - 1);
+      roof(index - 1);
 
       xDelta = x;
       yDelta = y;
@@ -281,7 +281,7 @@ function SquareSnowflake(initialOrder, initialX, initialY, initialStep){
       points.push(xDelta, yDelta);
       points.push(x, y);
 
-      D(index - 1);
+      left(index - 1);
     }
   }
 }
